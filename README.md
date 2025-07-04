@@ -42,4 +42,31 @@ cd AI_planner
 pip install -r requirements.txt
 cd app
 uvicorn main:app --reload --port 8000
+```
+
+### 2. Open the Frontend
+Just open **index.html** in your browser.
+
+
+##🔐 Environment Variables
+
+Create a .env file with your Groq API key:
+
 ```bash
+GROQ_API_KEY=your_groq_key_here
+```
+
+## 📦 Example Input
+
+Paste a project description like:
+
+```bash
+Develop a web-based fitness tracking app. The app should allow users to log workouts, track progress over time, and set fitness goals. It should have user authentication, a dashboard displaying statistics, and integration with wearable devices. The backend should be built with a REST API and a database. The frontend should be responsive and user-friendly.
+```
+
+
+## 🤝 Contributions
+Feedback are welcome!
+Just keep it simple and focused on developer experience.
+
+
