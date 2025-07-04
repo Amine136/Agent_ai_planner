@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Project Planner ✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>〽️ AI Project Planner</h1>
+            <p>Transform your ideas into actionable plans with the power of AI</p>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="projectInput">✨ Describe your project:</label>
+                <textarea 
+                    id="projectInput" 
+                    placeholder="e.g., Build a mobile app for tracking daily habits, create a personal blog website, develop a small e-commerce store..."
+                ></textarea>
+            </div>
+            <button class="analyze-btn" onclick="analyzeProject()">
+                🔍 Analyze & Plan Project
+            </button>
+        </div>
+
+        <div class="results-section">
+            <div class="results-header">
+                <h2>📋 Your Project Plan</h2>
+                <div class="loading" id="loadingIndicator">
+                    <div class="loading-spinner"></div>
+                    <span>AI is thinking...</span>
+                </div>
+            </div>
+            <div class="task-tree" id="taskTree">
+                <div class="empty-state">
+                    🎯 Enter your project description above and click "Analyze & Plan Project" to get started!
+                </div>
+            </div>
+            
+            <div class="refinement-section" id="refinementSection" style="display: none;">
+                <h3>🔧 Refine Your Project Plan</h3>
+                <p style="color: #666; margin-bottom: 1rem;">
+                    Want to modify something? Describe what you'd like to change, add, or remove:
+                </p>
+                <textarea 
+                    id="refinementInput" 
+                    class="refinement-input"
+                    placeholder="e.g., Add more detail to the testing phase, break down the design section into smaller tasks, remove the deployment section, make it more suitable for beginners..."
+                ></textarea>
+                <div class="action-buttons">
+                    <button class="refine-btn" onclick="refineProject()">
+                        ✨ Refine Plan
+                    </button>
+                    <button class="secondary-btn" onclick="addMoreTasks()">
+                        ➕ Add More Tasks
+                    </button>
+                    <button class="secondary-btn" onclick="simplifyPlan()">
+                        🎯 Simplify Plan
+                    </button>
+                    <button class="secondary-btn" onclick="addTimeline()">
+                        ⏰ Add Timeline
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
